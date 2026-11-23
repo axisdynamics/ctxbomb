@@ -1,0 +1,16 @@
+{
+  "listen": {"host": "127.0.0.1", "port": 8080},
+  "payloads_dir": "../payloads",
+  "log_file": "../logs/alerts.jsonl",
+  "webhook_url": null,
+  "trust_proxy": false,
+  "response_delay_ms": 0,
+  "bait_index": true,
+  "index_links": true,
+  "routes": [
+    {"path": "/.env", "template": "env", "payloads": ["zh-*"], "select": "random"},
+    {"path": "/internal/aws-secret.json", "template": "json_secret", "payloads": ["zh-*", "conv-*", "bio-*"], "select": "per_pattern"},
+    {"path": "/backup/handover.txt", "template": "text_note", "payloads": ["conv-*"], "select": "random"},
+    {"path": "/admin/notes.txt", "template": "raw", "payloads": ["bio-*"], "select": "random"}
+  ]
+}

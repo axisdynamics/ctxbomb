@@ -1,0 +1,10 @@
+logs/*.jsonl
+logs/*.log
+docker/nginx-demo/out/
+docker/nginx-demo/logs/
+config/config.json
+__pycache__/
+*.pyc
+
+# Borrador del artículo de LinkedIn (no se publica en el repo)
+docs/ARTICULO-LINKEDIN.md

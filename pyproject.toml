@@ -1,0 +1,17 @@
+[project]
+name = "ctxbomb"
+version = "1.0.0"
+description = "Honeypot pasivo que sirve context bombs a atacantes basados en IA (modo independiente y nginx)"
+requires-python = ">=3.9"
+license = { text = "MIT" }
+dependencies = []
+
+[project.scripts]
+ctxbomb = "ctxbomb.cli:main"
+
+[build-system]
+requires = ["setuptools>=61"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["ctxbomb"]

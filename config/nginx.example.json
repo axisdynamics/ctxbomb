@@ -1,0 +1,14 @@
+{
+  "payloads_dir": "../payloads",
+  "nginx": {
+    "web_root": "/etc/ctxbomb/www",
+    "log_file": "/var/log/nginx/ctxbomb.log",
+    "noindex": true
+  },
+  "routes": [
+    {"path": "/.env", "template": "env", "payloads": ["zh-*"], "select": "random"},
+    {"path": "/internal/aws-secret.json", "template": "json_secret", "payloads": ["zh-*", "conv-*", "bio-*"], "select": "per_pattern"},
+    {"path": "/backup/handover.txt", "template": "text_note", "payloads": ["conv-*"], "select": "random"},
+    {"path": "/admin/notes.txt", "template": "raw", "payloads": ["bio-*"], "select": "random"}
+  ]
+}
