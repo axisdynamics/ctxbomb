@@ -56,7 +56,7 @@ log JSON sin texto de payloads (compara solo hashes).
 
 ## Autor
 
-**Marco Torres Y.** (Plaxius) · [Exis](https://exis.cl) · mtorres@exis.cl
+**Marco Torres Y.** (Plaxius) · [Exis](https://exis.cl) · [Axis Dynamics](https://axisdynamics.cl) · mtorres@exis.cl
 
 ## Créditos
 
